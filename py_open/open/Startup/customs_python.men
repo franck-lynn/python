@@ -1,0 +1,109 @@
+﻿VERSION 139
+! ************************第1部分开始****************************
+EDIT UG_GATEWAY_MAIN_MENUBAR 
+BEFORE UG_HELP  
+   CASCADE_BUTTON  CUSTOM_MENUBAR_PYTHON
+   LABEL python 菜单
+END_OF_BEFORE  
+! ************************第1部分结束****************************
+
+! ************************第2部分开始****************************
+MENU CUSTOM_MENUBAR_PYTHON  
+    BUTTON HELLO_WORLD_PY
+    LABEL 你好, Hello Open 
+    MESSAGE 01.HELLO_OPEN
+    ACTIONS 01.hello_open.py
+	
+	
+    BUTTON COLLECTIONS_PY
+    LABEL 02.Session研究
+    MESSAGE 02.看看Session里面有些什么东西, 有多少条曲线?
+    ACTIONS 02.Session.py
+    
+    !定义一个分割线
+    SEPARATOR
+
+   !设置一级菜单, CASCADE_BUTTON 表明还有下级菜单
+   CASCADE_BUTTON CREATE_BODY_ID1 
+    LABEL 一级菜单A  
+    CASCADE_BUTTON MENU_LEVEL_ID2
+    LABEL 一级菜单B
+    CASCADE_BUTTON MENU_LEVEL_ID3
+    LABEL 一级菜单C
+
+END_OF_MENU
+!************************第2部分结束****************************
+
+
+
+!************************第3部分开始****************************
+! MENU的名称与层级菜单的上级名称相同
+	MENU CREATE_BODY_ID1
+	    BUTTON HOW_MANY_CURVES_ID1_1 
+		LABEL A3 有多少曲线  
+		ACTIONS 03.how_many_curves.py
+     
+		BUTTON CREATE_SIMPLE_ID1_2
+		LABEL A4 创建简单几何
+		ACTIONS  04.createSimpleGeometry.py
+		
+		BUTTON READING_ATTRIBUTES_BLOCK_ID1_3
+		LABEL A5 获取属性列表1
+		ACTIONS  05.reading_attributes1.py
+		
+		BUTTON READING_ATTRIBUTES_BLOCK_ID1_4
+		LABEL A5 获取属性列表2
+		ACTIONS  05.reading_attributes2.py
+		
+		BUTTON RANDOM_SPHERES_FORM_ID1_6
+		LABEL A6 random_spheres
+		ACTIONS  06.random_spheres.py
+		
+		BUTTON RANDOM_SPHERES_FORM_ID1_7
+		LABEL A7 random_spheres
+		ACTIONS  07.random_spheres.py
+		
+		BUTTON  MENU_FIRST_LEVEL_ID1_7
+		LABEL A8 路径
+		ACTIONS 08.nx_path.py.py
+		
+	END_OF_MENU 
+
+	MENU MENU_LEVEL_ID2
+		BUTTON MENU_SECOND_LEVEL_ID2_1
+		LABEL B09 创建BLOCK
+		ACTIONS  09.create_block.py
+     
+		BUTTON MENU_SECOND_LEVEL_ID2_2
+		LABEL B10 ObjectAndTags
+		ACTIONS  10.ObjectAndTags.py
+		
+		BUTTON MENU_SECOND_LEVEL_ID2_3
+		LABEL A3 ??
+		ACTIONS   
+		
+		BUTTON MENU_SECOND_LEVEL_ID2_4
+		LABEL A3 ???
+		ACTIONS   
+		
+		BUTTON MENU_SECOND_LEVEL_ID2_5
+		LABEL A4 ??
+		ACTIONS   
+		
+		BUTTON MENU_SECOND_LEVEL_ID2_6
+		LABEL A5 ??
+		ACTIONS   
+		
+		BUTTON MENU_SECOND_LEVEL_ID2_7
+		LABEL A6 ??
+		ACTIONS  
+	END_OF_MENU 
+
+
+	MENU MENU_LEVEL_ID3
+		BUTTON MENU_SECOND_LEVEL_ID3_1
+		LABEL 一级菜单3下的二级菜单1
+		BUTTON MENU_SECOND_LEVEL_ID3_2
+		LABEL 一级菜单3下的二级菜单1
+	END_OF_MENU 
+!************************第3部分结束****************************

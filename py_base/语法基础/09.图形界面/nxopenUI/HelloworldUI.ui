@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Helloworld</class>
+ <widget class="QWidget" name="Helloworld">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>274</width>
+    <height>145</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>对话框的标题</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>151</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>151</width>
+     <height>91</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>一个简单的对话框-标签</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

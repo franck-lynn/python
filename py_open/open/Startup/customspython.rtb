@@ -1,0 +1,58 @@
+﻿TITLE  PYTHON选项卡 !选项卡显示的标题, 制作图标命令用的
+VERSION 170
+
+BEGIN_GROUP CUSTOMTAB_1 !组 id
+    LABEL PYTHON选项卡A
+    CONTEXT_TITLE  PYTHON选项卡B
+    BITMAP assy_add_context
+
+        BUTTON HELLO_WORLD_PY !与菜单中相同的定义, 功能也是一样的
+        BUTTON COLLECTIONS_PY
+        
+        ! 制作下拉菜单
+        BEGIN_GALLERY NX_RBN_GALLERY_1
+            GALLERY_STYLE SMALL_IMAGE_AND_TEXT
+            LABEL 有更多
+            CONTEXT_TITLE 有下拉图标 (Position Component)
+            COLLAPSED TRUE ! FALSE 会将下拉内容放在 RBN 上
+            COLUMN_IN_RIBBON 1
+            COLUMN_IN_POPUP 1
+            BITMAP remember_cons !命令行上的图标
+                BEGIN_GALLERY NX_RBN_GALLERY
+                    LABEL 下来菜单 ! 下来菜单上的说明
+                    CONTEXT_TITLE Context_Title
+                    BITMAP bitmap_1
+                        BUTTON HOW_MANY_CURVES_ID1_1 
+                        BUTTON CREATE_SIMPLE_ID1_2
+                        BUTTON READING_ATTRIBUTES_BLOCK_ID1_3
+                        BUTTON READING_ATTRIBUTES_BLOCK_ID1_4
+                        BUTTON RANDOM_SPHERES_FORM_ID1_6
+                        BUTTON RANDOM_SPHERES_FORM_ID1_7
+                        
+                        BUTTON  MENU_FIRST_LEVEL_ID1_7
+                END_GALLERY
+        END_GALLERY
+         
+         
+         
+        BEGIN_GROUP NX_RBN_GALLERY_2 
+            LABEL 带状工具条
+            CONTEXT_TITLE Context_Title_A
+            COLLAPSED TRUE ! FALSE 会将下拉内容放在 RBN 上
+            BITMAP bitmap_2
+            BEGIN_GROUP NX_RBN_GALLERY_3 
+                BUTTON MENU_SECOND_LEVEL_ID2_1
+                BUTTON MENU_SECOND_LEVEL_ID2_2
+            END_GROUP 
+        END_GROUP
+        
+        
+        BUTTON UG_ASSY_INSERT_NEW_COMPONENT
+
+        BUTTON UG_ASSY_CREATE_NEW_PARENT ! 新建父装配
+        RIBBON_STYLE MEDIUM_IMAGE_AND_TEXT
+
+        BUTTON UG_ASSY_CREATE_DMU_WORKSET
+        RIBBON_STYLE MEDIUM_IMAGE_AND_TEXT
+
+END_GROUP
