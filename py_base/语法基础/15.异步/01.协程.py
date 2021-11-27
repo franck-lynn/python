@@ -10,7 +10,9 @@ import time
 # asyncio.run(main())
 
 async def count():
+    # 先执行 count() 函数的 one, 
     print("One")
+    # 这里有阻塞, 再执行第2个 count()
     await asyncio.sleep(1)
     print("Two")
 
